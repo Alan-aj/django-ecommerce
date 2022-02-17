@@ -16,6 +16,6 @@ Initialized empty Git repository in E:/aj/ecommerce/ecommerce/.git/
 $ git config --global user.name "Alan-aj"
 $ git config --global user.email "alanj14333@gmail.com"
 $ git add .
-$ git commit -m "main.html changed"
+$ git commit -m "first commit"
 $ git remote add origin https://github.com/Alan-aj/django-ecommerce.git
 $ git push origin master
