@@ -1,0 +1,21 @@
+pip install virtualenv
+virtualenv aj1
+cd aj1
+cd Scripts
+activate
+
+E:\aj\ecommerce>pip install django
+E:\aj\ecommerce>django-admin startproject ecommerce
+E:\aj\ecommerce\ecommerce>python manage.py startapp user
+
+
+GIT setup
+$ git init
+Initialized empty Git repository in E:/aj/ecommerce/ecommerce/.git/
+
+$ git config --global user.name "Alan-aj"
+$ git config --global user.email "alanj14333@gmail.com"
+$ git add .
+$ git commit -m "main.html changed"
+$ git remote add origin https://github.com/Alan-aj/django-ecommerce.git
+$ git push origin master
