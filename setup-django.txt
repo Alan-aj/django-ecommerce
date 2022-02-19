@@ -4,9 +4,10 @@ cd aj1
 cd Scripts
 activate
 
-E:\aj\ecommerce>pip install django
-E:\aj\ecommerce>django-admin startproject ecommerce
-E:\aj\ecommerce\ecommerce>python manage.py startapp user
+(aj1) E:\aj\ecommerce>pip install django
+(aj1) E:\aj\ecommerce>django-admin startproject ecommerce
+(aj1) E:\aj\ecommerce\ecommerce>python manage.py startapp user
+(aj1) E:\aj\ecommerce\ecommerce>python manage.py runserver
 
 
 GIT setup
