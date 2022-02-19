@@ -1,3 +1,10 @@
+cmd command
+-----------
+cd filename
+cd ..
+dir
+
+-------------------------------------------------------------
 pip install virtualenv
 virtualenv aj1
 cd aj1
@@ -8,9 +15,10 @@ activate
 (aj1) E:\aj\ecommerce>django-admin startproject ecommerce
 (aj1) E:\aj\ecommerce\ecommerce>python manage.py startapp user
 (aj1) E:\aj\ecommerce\ecommerce>python manage.py runserver
-
+--------------------------------------------------------------
 
 GIT setup
+--------
 $ git init
 Initialized empty Git repository in E:/aj/ecommerce/ecommerce/.git/
 
@@ -20,3 +28,17 @@ $ git add .
 $ git commit -m "first commit"
 $ git remote add origin https://github.com/Alan-aj/django-ecommerce.git
 $ git push origin master
+git pull origin master
+
+Heroku deployment
+--------
+1.  create -> 'Procfile'
+    add -> web: gunicorn ecommerce.wsgi --log-file -
+2.  create -> runtime.txt
+    add-> python-3.10.0
+3.  cmd ->  pip install gunicorn whitenoise
+    cmd ->  pip freeze>requirements.txt
+4.  paste -> 'whitenoise.middleware.WhiteNoiseMiddleware', (in settings>middleware)
+    paste -> 'herokudjangoapp.herokuapp.com' (in settings>allowed host)
+5.  git -> add, commit, push
+ 
