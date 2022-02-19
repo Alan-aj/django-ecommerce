@@ -39,6 +39,10 @@ Heroku deployment
 3.  cmd ->  pip install gunicorn whitenoise
     cmd ->  pip freeze>requirements.txt
 4.  paste -> 'whitenoise.middleware.WhiteNoiseMiddleware', (in settings>middleware)
-    paste -> 'herokudjangoapp.herokuapp.com' (in settings>allowed host)
+    paste -> 'herokudjangoapp.herokuapp.com' (in settings>allowed host) (change value to -> ecommerce-django-aj)
 5.  git -> add, commit, push
- 
+6.  heroku new app create
+    link github
+7.  add heroku>setting>config values -> DISABLE_COLLECTSTATIC : 1
+    manual deploy -> deploy branch
+8.  
