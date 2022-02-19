@@ -30,7 +30,7 @@ $ git remote add origin https://github.com/Alan-aj/django-ecommerce.git
 $ git push origin master
 git pull origin master
 
-Heroku deployment
+Heroku deployment (refer: https://www.codementor.io/how-to-deploy-django-app-on-heroku)
 --------
 1.  create -> 'Procfile'
     add -> web: gunicorn ecommerce.wsgi --log-file -
