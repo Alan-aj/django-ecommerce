@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <form action="index.html" onsubmit="return check()">
+        <table>
+            <tr>
+                <th>Name </th>
+                <td>: <input type="text" name="" id="txt"></td>
+                <td><span id="txtchk"></span></td>
+            </tr>
+            <tr>
+                <th>Age</th>
+                <td>: <input type="text" id="age"></td>
+                <td><span id="agechk"></span></td>
+            </tr>
+            <tr>
+                <th>Gender</th>
+                <td>: <input type="radio" name="gender" id="male"> Male
+                    <input type="radio" name="gender" id="female"> Female </td>
+                <td><span id="genchk"></span></td>
+            </tr>
+            <tr>
+                <th>Address </th>
+                <td>: <textarea name="" id="addr" cols="25" rows="10"></textarea></td>
+                <td><span id="addrchk"></span></td>
+            </tr>
+            <tr>
+                <th>Phone </th>
+                <td>: <input type="text" id="phn"></td>
+                <td><span id="phnchk"></span></td>
+            </tr>
+            <tr>
+                <th>Email  </th>
+                <td>: <input type="email" id="mail"></td>
+                <td><span id="mailchk"></span></td>
+            </tr>
+            <tr>
+                <th>Password </th>
+                <td>: <input type="password" name="pass" id="pwd"></td>
+                <td><span id="pwdchk"></span></td>
+            </tr>
+            <tr>
+                <th>Confirm password  </th>
+                <td>: <input type="password" name="pass" id="conf"></td>
+                <td><span id="confchk"></span></td>
+            </tr>
+            
+            <tr>
+                <th><button>Submit</button></th>
+            </tr>
+        </table>
+    </form>
+    
+    <script>
+        function check() {
+            var txt=document.getElementById("txt")
+            var age=document.getElementById("age")
+            var male=document.getElementById("male")
+            var female=document.getElementById("female")
+            var addr=document.getElementById("addr")
+            var phn=document.getElementById("phn")
+            var mail=document.getElementById("mail")
+            var pwd=document.getElementById("pwd")
+            var conf=document.getElementById("conf")
+
+            //name validation
+            if(txt.value=="") {
+                document.getElementById("txtchk").innerHTML="Enter your name"
+                return false
+            }
+            else{
+                document.getElementById("txtchk").innerHTML=""
+            }
+
+            //age validation
+            if(age.value=="") {
+                document.getElementById("agechk").innerHTML="Enter your age"
+                return false
+            }
+            else {
+                document.getElementById("agechk").innerHTML=""
+            }
+
+            //gender validation
+            if(male.checked==false && female.checked==false) {
+                document.getElementById("genchk").innerHTML="Select your gender"
+                return false
+            }
+            else {
+                document.getElementById("genchk").innerHTML=""
+            }
+
+            //address validation
+            if(addr.value=="") {
+                document.getElementById("addrchk").innerHTML="Enter your address"
+                return false
+            }
+            else {
+                document.getElementById("addrchk").innerHTML=""
+            }
+
+            //phone validation
+            if(phn.value=="") {
+                document.getElementById("phnchk").innerHTML="Enter your phone number"
+                return false
+            }
+            else {
+                document.getElementById("phnchk").innerHTML=""
+            }
+
+            //email validation
+            if(mail.value=="") {
+                document.getElementById("mailchk").innerHTML="Enter your email address"
+                return false
+            }
+            else {
+                document.getElementById("mailchk").innerHTML=""
+            }
+
+            //password validation
+            if(pwd.value=="") {
+                document.getElementById("pwdchk").innerHTML="Enter a password"
+                return false
+            }
+            else {
+                document.getElementById("pwdchk").innerHTML=""
+            }
+
+            //confirm validation
+            if(conf.value=="") {
+                document.getElementById("confchk").innerHTML="Confirm your password"
+                return false
+            }
+            else {
+                document.getElementById("confchk").innerHTML=""
+            }
+
+            //password matching
+            if(pwd.value!=conf.value) {
+                document.getElementById("confchk").innerHTML="Incorrect password"
+                return false
+            }
+            else {
+                document.getElementById("confchk").innerHTML=""
+            }
+
+        }
+    </script>
+</body>
+</html>

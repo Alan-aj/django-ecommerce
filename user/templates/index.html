@@ -15,12 +15,28 @@
         <input class="form-control" type="text" id="num1">
         <button type="button" class="btn btn-success" onclick=num()>click</button><br>
     </div>
-    <script >
-        var a = 20
-        var b = 30
-        var sum = a + b
-        document.write(sum)
 
+    Number 1: <input type="number" id="num1">
+    <br><br>
+    Number 2: <input type="number" id="num2">
+    <br><br>
+    <button onclick="sum()" id="btn">Add</button>
+    <p id="output"></p>
+
+<script>
+    function sum() {
+        var n1=document.getElementById("num1").value;
+        var n2=document.getElementById("num2").value;
+        var sum= parseInt(n1) + parseInt(n2);
+        document.getElementById("output").innerHTML="Result is " + sum;
+    }
+</script>
+
+
+
+    <script >
+    
+        document.write("Hello")
         function num(){
             var num1=document.getElementById("num1").value
             if(num1%2==0){
@@ -30,13 +46,6 @@
                 alert("odd")
             }
         }
-        // var age = 60
-        // if(age>18){
-        //     alert("you are eligible")
-        // }
-        // else{
-        //     alert("not eligible")
-        // }  
 
     </script>
 </body>
