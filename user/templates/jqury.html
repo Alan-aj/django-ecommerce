@@ -8,18 +8,24 @@
     <script src="../static/js/jquery.min.js "></script>
 </head>
 <body > 
-
-    <p>First para</p>
+<div id="p1" style="padding: 10px; height: max-content; background-color: aquamarine;">
+    <p id="pw">First para</p>
     <p id="para2">Second para</p>
     <p id="para" style="display: none;">Third para</p>
     <button id="but1">click</button>
-
+</div>
     <script>
         $(document).ready(function() {
 
             $("#but1").click(function(){
-                $('#para').toggle()
-            })
+                $('#para').fadeToggle()
+                $('#para2').slideToggle()
+
+            });
+
+            $("but1").click(function(){
+                $("div").animate({left: '250px'});
+            }); 
         });
     </script>
 

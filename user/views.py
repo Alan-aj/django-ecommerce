@@ -7,3 +7,9 @@ def index(request):
 
 def main(request):
     return render(request,'main.html')
+
+def jquery(request):
+    return render(request,'jqury.html')
+
+def form(request):
+    return render(request,'form.html')
