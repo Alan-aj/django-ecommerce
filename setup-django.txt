@@ -61,6 +61,7 @@ insert into employee values (10, 'John', 18, 80);
 select * from employee;
 select * from employee where id=1;
 delete from employee where id=10;
+update employee set age=30, mark=50 where id=1;
 alter table employee add column subject varchar(10);
 alter table employee drop column subject;
 truncate employee;
