@@ -1,26 +1,26 @@
-cmd command
------------
-cd filename
-cd ..
-dir
+cmd command     |
+-----------     |
+cd filename     |
+cd ..           |
+dir             |
 
--------------------------------------------------------------
-pip install virtualenv
-virtualenv aj1
-cd aj1
-cd Scripts
-activate
-
-(aj1) E:\aj\ecommerce>pip install django
-(aj1) E:\aj\ecommerce>django-admin startproject ecommerce
-(aj1) E:\aj\ecommerce\ecommerce>python manage.py startapp user
-(aj1) E:\aj\ecommerce\ecommerce>python manage.py runserver
---------------------------------------------------------------
+=========================================================================
+pip install virtualenv                                                  |
+virtualenv aj1                                                          |
+cd aj1                                                                  |
+cd Scripts                                                              |
+activate                                                                |
+                                                                        
+(aj1) E:\aj\ecommerce>pip install django                                |
+(aj1) E:\aj\ecommerce>django-admin startproject ecommerce               |
+(aj1) E:\aj\ecommerce\ecommerce>python manage.py startapp user          |
+(aj1) E:\aj\ecommerce\ecommerce>python manage.py runserver              |
+=========================================================================
 
 GIT setup
 --------
 $ git init
-Initialized empty Git repository in E:/aj/ecommerce/ecommerce/.git/
+    Initialized empty Git repository in E:/aj/ecommerce/ecommerce/.git/
 
 $ git config --global user.name "Alan-aj"
 $ git config --global user.email "alanj14333@gmail.com"
@@ -29,6 +29,7 @@ $ git commit -m "first commit"
 $ git remote add origin https://github.com/Alan-aj/django-ecommerce.git
 $ git push origin master
 git pull origin master
+
 
 Heroku deployment (refer: https://www.codementor.io/how-to-deploy-django-app-on-heroku)
 --------
@@ -46,3 +47,22 @@ Heroku deployment (refer: https://www.codementor.io/how-to-deploy-django-app-on-
 7.  add heroku>setting>config values -> DISABLE_COLLECTSTATIC : 1
     manual deploy -> deploy branch
 8.  Open app
+
+
+Database (PostgresSQL)
+---------------------------
+postgres=# create database db1;
+postgres=# \c db1;
+db1=# create table employee (id serial primary key, name varchar(20), age int, mark float);
+
+insert into employee (name, age, mark) values ( 'Ram', 20, 98);
+insert into employee (name, age, mark) values ( 'Raju', 20, 90),('Damu', 25, 99);
+insert into employee values (10, 'John', 18, 80);
+select * from employee;
+select * from employee where id=1;
+delete from employee where id=10;
+alter table employee add column subject varchar(10);
+alter table employee drop column subject;
+truncate employee;
+drop table employee;
+
