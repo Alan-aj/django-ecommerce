@@ -13,3 +13,6 @@ def jquery(request):
 
 def form(request):
     return render(request,'form.html')
+
+def fb(request):
+    return render(request,'fb.html')

@@ -67,3 +67,15 @@ alter table employee drop column subject;
 truncate employee;
 drop table employee;
 
+Ecommerce database design
+`````````````````````````
+create table user_tb (uid int primary key, uname varchar(20), password varchar(20), email varchar(20));
+create table product_tb (pid int primary key, pname varchar(20), des varchar(20), price int);
+create table order_tb (oid int primary key, user_id int references user_db(uid), product_id int references product_db(pid), quantity int);
+insert into user_tb values (100, 'ram', 'ram123', 'ram@gmail.com');
+insert into product_tb values (200, 'soap', 20);
+insert into order_tb values (1, 101, 200, 5);
+
+update order_tb set quantity = 15 where oid=1;
+alter table product_tb drop column des;
+select quantity,uname,email,pname,price from order_tb join user_tb on order_tb.user_id = user_tb.uid join product_tb on order_tb.product_id = product_tb.pid;

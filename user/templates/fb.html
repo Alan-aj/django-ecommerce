@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table project</title>
+
+</head>
+<body>
+    <table>
+      <tr class="nav">
+          <td class="logo">Facebook</td>
+          <td class="log"><div class="login">
+              <input type="text" placeholder="Username">
+              <input type="text" placeholder="Password">
+              <button>Log in</button></div>
+          </td>
+      </tr>  
+      <tr>
+          <td class="connect">
+           <h2>Connect with friends and the world around you on Facebook.</h2><br>
+            <b>See photos and updates</b>  from friends in News Feed<br>
+            <b>Share what's new</b> in your life on your timeline<br>
+            <b>Find more</b> of what you're looking for with graph search
+          </td>
+          <td class="sign">
+            <h1>Sign Up</h1> <br>
+           <div class="name"> <input type="text" placeholder="First name" >
+            <input type="text" placeholder="Last name" ><br>
+        </div><div class="pass"><input type="text" placeholder="Email"><br>
+            <input type="password" placeholder="Password"><br>
+            <input type="password" placeholder="Re-enter password"><br>
+        </div><div class="agree"> By clicking Sign Up, you agree to our Terms and that you have read our Data Use Policy, 
+            including our Cookie Use.</div>
+            <br>
+           <div class="submit"> <input type="submit" value="Sign in"></div>
+          </td>
+      </tr>
+    </table>
+
+
+<style>
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lucida Grande', tahoma,verdana,arial,sans-serif;
+    line-height: 1.28;
+}
+.nav {
+    width: 100%;
+    height: 82px;
+    background-color: #3b5998;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+
+}
+.logo{
+    color: white;
+    font-weight: bold;
+    font-size: xx-large;
+    padding-left: 15px;
+}
+.log{
+    padding-left: 10%;
+
+}
+.log>input{
+    padding: 2px;
+}
+td{
+    width: 50%;
+    color:#333;
+}
+.connect{
+    padding: 50px;
+}
+b{
+    line-height: 2.28;
+}
+h1{
+    text-align: center;
+    padding-top: 10px;
+}
+.sign{
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+.name>input{
+    width: 38%;
+    padding: 8px 10px;
+    font-size: 16px;
+    margin: 8px 0;
+}
+.pass>input{
+    width: 80%;
+    padding: 8px 10px;
+    margin: 8px 0;
+    font-size: 16px;
+}
+.submit>input{
+    border: 1px solid;
+    padding: 8px 10px;
+    width: 20%;
+    background-color: #67ae55;
+    color:#fff;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 5px;
+}
+.agree{
+    padding: 10px;
+    padding-left: 0;
+    font-size: 14px;
+}
+.login>input{
+    border-radius: 3px;
+    padding: 2px 0px;
+    padding-left: 4px;
+}
+</style>
+</body>
+</html>
