@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-r#=1#2bj2q42e_0bx6cw@_5_06!hd)d@pln(0om^d*^6y3&y_q
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'ecommerce-django-aj.herokuapp.com',
+    'ecom-aj.herokuapp.com',
     '127.0.0.1'
 ]
 
