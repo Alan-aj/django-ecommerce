@@ -79,3 +79,15 @@ insert into order_tb values (1, 101, 200, 5);
 update order_tb set quantity = 15 where oid=1;
 alter table product_tb drop column des;
 select quantity,uname,email,pname,price from order_tb join user_tb on order_tb.user_id = user_tb.uid join product_tb on order_tb.product_id = product_tb.pid;
+
+connect to postgres (orm) csrf
+```````````````````
+
+setting>database (add postgres)
+pip install psycopg2
+models> add signup
+view> update view
+html> {% csrf_token %}
+
+python manage.py makemigrations
+python manage.py migrate

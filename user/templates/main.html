@@ -1,12 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1>Welcome to Main website</h1>
-</body>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Password</th>
+      </tr>
+      {% for i in user %}
+      <tr>
+        <form action="" method="POST">
+          {% csrf_token %}
+          <td>{{i.name}}</td>
+          <td>{{i.email}}</td>
+          <td>{{i.password}}</td>
+          <td><button>Delete</button></td>
+          <td><button>Update</button></td>
+          <td><input type="hidden" name="id" value="{{i.signid}}" /></td>
+        </form>
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
 </html>
