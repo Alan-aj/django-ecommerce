@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from .models import signup
 
 # Create your views here.
@@ -44,3 +44,30 @@ def update(request, id):
         obj.password = pwd
         obj.save()
     return render(request,'update.html',{'user':obj})
+
+
+# login page setup
+def login(request):
+    msg=""
+    if request.method=='POST':
+        uname=request.POST['username']
+        psw=request.POST['password']
+        
+        try:
+            obj_exist=signup.objects.get(name=uname, password=psw)
+            request.session['user']=obj_exist.signid
+            return redirect("home")
+
+        except signup.DoesNotExist:
+            msg="Username or password incorrect"
+    return render(request,"login.html",{'msg':msg,})
+
+def home(request):
+    obj=signup.objects.get(signid=request.session['user'])
+    return render(request,"home.html",{'user':obj,})
+
+def logout(request):
+    del request.session['user']
+    request.session.flush()
+
+    return redirect("log_user")

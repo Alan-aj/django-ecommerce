@@ -8,5 +8,8 @@ urlpatterns = [
     path('jquery',views.jquery),
     path('form',views.form),
     path('fb',views.fb),
-    path('update/<int:id>',views.update)
+    path('update/<int:id>',views.update),
+    path('log',views.login,name="log_user"),
+    path('home',views.home,name="home"),
+    path('logout',views.logout,name="logout_user"),
 ]
