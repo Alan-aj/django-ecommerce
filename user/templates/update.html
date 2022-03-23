@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Update Form</h1>
+    <form method="post" action="">
+      {% csrf_token %}
+      <table>
+        <tr>
+          <th>Name</th>
+          <td>: <input type="text" name="name" id="txt" value="{{user.name}}" /></td>
+        </tr>
+        <tr>
+          <th>Email</th>
+          <td>: <input type="email" id="mail" name="email" value="{{user.email}}"/></td>
+        </tr>
+        <tr>
+          <th>Password</th>
+          <td>: <input type="password" name="pwd" id="pwd" value="{{user.password}}"/></td>
+        </tr>
+        <tr>
+          <th><button>Update</button></th>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>

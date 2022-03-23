@@ -7,5 +7,6 @@ urlpatterns = [
     path('main',views.main),
     path('jquery',views.jquery),
     path('form',views.form),
-    path('fb',views.fb)
+    path('fb',views.fb),
+    path('update/<int:id>',views.update)
 ]

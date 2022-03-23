@@ -31,3 +31,16 @@ def form(request):
         obj.save()
 
     return render(request,'form.html')
+
+# view to update data into table signup
+def update(request, id):
+    obj = signup.objects.get(signid=id)
+    if request.method=='POST':
+        name = request.POST['name']
+        email = request.POST['email']
+        pwd = request.POST['pwd']
+        obj.name = name
+        obj.email = email
+        obj.password = pwd
+        obj.save()
+    return render(request,'update.html',{'user':obj})
