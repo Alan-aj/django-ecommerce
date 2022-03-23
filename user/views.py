@@ -71,3 +71,7 @@ def logout(request):
     request.session.flush()
 
     return redirect("log_user")
+
+
+def profile(request):
+    pass
