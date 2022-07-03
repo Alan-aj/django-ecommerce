@@ -30,6 +30,13 @@ $ git remote add origin https://github.com/Alan-aj/django-ecommerce.git
 $ git push origin master
 git pull origin master
 
+# git rm -r --cached file
+# git remote add origin link
+# git remote -v
+# git remote remove origin
+# git push origin main
+-------------------------------
+
 
 Heroku deployment (refer: https://www.codementor.io/how-to-deploy-django-app-on-heroku)
 --------
